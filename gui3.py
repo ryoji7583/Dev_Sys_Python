@@ -7,6 +7,13 @@ class Form(QDialog):
     def __init__(self, parent=None):
         super(Form, self).__init__(parent)
         self.setWindowTitle("My Form")
+        self.edit = QLineEdit("")
+        self.button = QPushButton("calculate")
+        layout = QVBoxLayout()
+        layout.addWidget(self.edit)
+        layout.addWidget(self.button)
+        self.setLayout(layout)
+
 
 if __name__ == '__main__':
     # Qt Applicationを作成します
